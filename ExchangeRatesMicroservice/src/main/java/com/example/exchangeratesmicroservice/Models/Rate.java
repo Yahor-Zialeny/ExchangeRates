@@ -1,15 +1,13 @@
 package com.example.exchangeratesmicroservice.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import java.util.Date;
 
 
 @Entity
 @Data
+@Table(name = "rates")
 public class Rate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
