@@ -35,7 +35,7 @@ public class RestController {
             Rate rate = rateService.getRate(date, id);
             return rate.toString();
         }catch (HttpClientErrorException e){
-            String name = currencyService.getCurrencyViaAPI(id).getCur_Name();
+            String name = currencyService.getCurrencyViaAPI(id).getCur_Name_Eng();
             return "The currency "+ name + " went out of circulation";
         }
     }
