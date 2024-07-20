@@ -20,9 +20,15 @@ create table if not exists currencies(
 
 create table if not exists rates(
     Cur_id int primary key,
-    Date timestamp not null,
+    Date varchar not null,
     Cur_Abbreviation varchar not null,
     Cur_Scale int not null,
     Cur_Name varchar not null,
+    Cur_OfficialRate double not null
+);
+
+create table if not exists shortrates(
+    Cur_id int primary key,
+    Date varchar not null,
     Cur_OfficialRate double not null
 );
