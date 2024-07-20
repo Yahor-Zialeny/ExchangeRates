@@ -11,4 +11,5 @@ public interface IRateService {
     public Rate updateRate(Rate rate);
     public void deleteRate(Long id);
     public void addRates(String date);
+    public Rate getRate(String date, Long id);
 }

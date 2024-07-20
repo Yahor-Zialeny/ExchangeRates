@@ -9,4 +9,5 @@ public interface ICurrencyService {
     public List<Currency> getAllCurrencies();
     public Currency updateCurrency(Currency currency);
     public void deleteCurrencyById(long id);
+    public Currency getCurrencyViaAPI(long id);
 }

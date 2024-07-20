@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "efe75448-e951-4061-aa02-687a9a8a37ea",
+		"name": "ExchangeRates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37056220"
+	},
+	"item": [
+		{
+			"name": "addRatesPOST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/addRates/2024-07-20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"addRates",
+						"2024-07-20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRateGET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/getRate/2024-07-19/456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getRate",
+						"2024-07-19",
+						"456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRateExceptionGET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/getRate/2024-07-19/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getRate",
+						"2024-07-19",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

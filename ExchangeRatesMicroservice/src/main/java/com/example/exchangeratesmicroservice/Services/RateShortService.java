@@ -39,10 +39,12 @@ public class RateShortService implements IRateShortService{
     }
 
     @Override
-    public Rate getRates(String date, long id) {
-        String url = "https://api.nbrb.by/exrates/rates/" + id + "?ondate=" + date;
+    public RateShort getRate(String date, long id) {
+        String url = "https://api.nbrb.by/ExRates/Rates/Dynamics/" + id + "?startDate=" + date +"&endDate=" + date;
         RestTemplate restTemplate = new RestTemplate();
-        Rate rate = restTemplate.getForObject(url, Rate.class);
-        return rate;
+        RateShort[] rateShorts = restTemplate.getForObject(url, RateShort[].class);
+        RateShort rateShort = rateShorts[0];
+        return rateShort;
     }
+
 }

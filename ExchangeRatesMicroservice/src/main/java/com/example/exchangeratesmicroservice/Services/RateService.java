@@ -55,4 +55,11 @@ public class RateService implements IRateService {
         }
     }
 
+    @Override
+    public Rate getRate(String date, Long id) {
+        String url = "https://api.nbrb.by/exrates/rates/"+ id +"?ondate=" + date;
+        RestTemplate restTemplate = new RestTemplate();
+        Rate rate = restTemplate.getForObject(url, Rate.class);
+        return rate;
+    }
 }

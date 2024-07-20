@@ -10,5 +10,5 @@ public interface IRateShortService {
     public List<RateShort> getAllShortRates();
     public RateShort updateShortRate(RateShort rate);
     public void deleteShortRate(Long id);
-    public Rate getRates(String date, long id);
+    public RateShort getRate(String date, long id);
 }
